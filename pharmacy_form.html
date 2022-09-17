@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<head>
+    <title>Patient Information Form</title>
+    <style>
+        
+        body{
+            background-color: white;     
+        }       
+           
+      .flex-container{
+        display:flex;   
+        position: fixed;
+        flex-direction:row; 
+        flex-wrap:nowrap; 
+        justify-content: space-between;
+        margin-top: 2% ;
+        margin-left:20%;
+        top:20px;
+        width: 63%;    
+        height:75%;
+        object-fit: contain;
+        overflow-y: scroll;
+     /* overflow: auto;*/
+        padding:1px;
+        align:center;
+       background-color: white;
+        box-shadow: 10px 25px 30px rgba(0,0,0,0.2);  
+      }
+       
+        
+        .flex-container  img {
+            display:inline-flex;
+            position:fixed;
+            flex-direction:row;
+          /*  width: 320px;
+            height:455px;*/
+            width:auto;
+            height:75%;
+            margin-right: 0%;
+            margin 0px;
+           /* padding:0.2%;*/
+           object-fit: cover;
+            top: 8%;
+            overflow: auto;
+          /*  vertical-align:right;*/
+            align-self:auto;
+            }
+
+            
+        .flex-container form
+        {   
+         object-fit:contain;
+        }
+
+        header{
+            border-radius: 5px;
+            height: auto;
+            text-align: center;
+            background-color: rgb(192, 149, 233);
+        }
+
+        footer{
+            margin-top: 70px;
+            margin-bottom: 70px;
+        }
+
+        p, h1{
+            padding: 10px;
+            margin: 0%;
+        }
+
+
+        input{
+            width: 200px;
+            border: none;
+            background-color: white;
+            border-bottom: 1px solid gray;
+            height: 25px;
+            margin:10px;
+            margin-left:20px;
+        }
+
+        input, label, h4, #district{
+            font-size: 16px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        button{
+            display: inline-block;
+            float:none;
+            margin: 20px;
+            width: 80px;
+            border-radius: 4px;
+            height: 30px;
+            color: white;
+            font-size: 18px;
+            border: none;
+            align:bottom center;
+            background-color: rgb(175, 102, 243);
+            margin-top: 10px;
+            justify-content: flex-end;
+            align-items: baseline;
+      }
+        
+
+        #district{
+            height: 30px;
+        }
+
+        /* combinator selector */
+
+        header p{
+            text-align: left;
+        }
+
+       
+
+        /* pseudo class selector */
+        input:focus{
+            outline: none !important;
+            border: none;
+            border-bottom:1px solid black;
+        }
+         
+        /* attribute selector */
+        input[name^="option"]{
+            width: 20px;
+            height: 20px;
+        }
+
+    </style>
+    </head>
+    <body>      
+        <div class="flex-container">
+        <form action="">
+            <div>       
+            <div> 
+                <h4>1.  Your Contact Details</h4> 
+                <input type="text" placeholder="Full name"   name="fullname" required/>
+                <input type="text"  placeholder="Patient id"   name="patient id" />  
+                <br> 
+                <input type="number"  placeholder="Contact number"  min="6000000000" max="9999999999" required/>
+                <input type="email"  placeholder="Email id"  name=" emailid" required/><br>           
+                </div> 
+                                  
+                <div>
+                <h4>2.  Address</h4>
+                <input type="text" placeholder="House Number" name="house number" required/>
+                <input type="text" placeholder="Street" name="street" required/><br>
+                <input type="text" placeholder="Area"   name="area" required/>
+                <p><b>   District </b></p>
+                <select name="District" id="district" required>
+                    <option value="">Choose</option>
+                    <option value="Bangalore Urban">Bangalore Urban</option>
+                    <option value="Bangalore Rural">Bangalore Rural</option>
+                    <option value="Ramnagar">Ramnagar</option>
+                </select>   
+                </div>
+            
+                <div> 
+                    <h4>3.  Choose the Test Type </h4>
+                    <p>Check atleast one box without fail</p>
+                    <input type="checkbox" id="c1" name="option1" value="Cbc">
+                    <label for="c1">CBC</label>
+                    <br>
+                    <input type="checkbox" id="c2" name="option2" value="Cu">
+                    <label for="c2">Complete Urine</label>
+                    <br>
+                    <input type="checkbox" id="c3" name="option3" value="Lp">
+                    <label for="c3">Lipid Profile</label>
+                    <br>
+                    <input type="checkbox" id="c4" name="option3" value="Tsh">
+                    <label for="c3">Thyroid Stimulating Hormone(TSH)</label>
+                    <br>
+                    <input type="checkbox" id="c4" name="option3" value="Gt">
+                    <label for="c3">Glucose Test</label>
+                    <br>
+                </div>
+            
+             <div> 
+                <h4>4.  Do you want a hard copy of the report also?</h4>
+                <input type="radio" id="c5" name="option" value="True" required>
+                <label for="c5">Yes</label>
+                <br>
+                <input type="radio" id="c6" name="option" value="False">
+                <label for="c6">No</label>
+                <br>
+             </div>
+
+              <div>  
+                <h4>5.  Select Your Comfortable Date and Time </h4>
+                    <label>Date:
+                        <input type="date" name="lab test date" min="2022-09-01" max="2017-09-30">
+                    </label>
+                    <br>
+                    <label>Time:
+                        <input type="time" name="lab test time" min="2022-09-01" max="2017-09-30">
+                    <br>
+                    <label for="appt">Select a time:</label>
+                        <input type="time" id="appt" name="appt" min="09:00" max="21:00" required>
+                        <br>
+                        <small>collection hours are 9am to 9pm</small>
+                    </label>        
+                </div> 
+            <div  style="float:right">  
+                <img align="right" src="Images-pharmacy/Lab-Test/lab-test.jpg" alt="">
+            </div>
+        </div>
+    </div>      
+    <button>Reset</button>
+     <button>Submit</button>       
+    </form>        
+     </body>
+    </html>
+
+
+ 

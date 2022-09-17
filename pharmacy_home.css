@@ -1,0 +1,244 @@
+body{
+   
+    background-color: white;
+    border: 2px solid black ;
+    margin-left: 10px;
+    margin-right:10px;
+    margin-top: 10px;
+    width: 100%;   
+}
+
+header{
+    font-weight: bolder;
+    color: rgb(255, 255, 255);
+    font-size: xx-large;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.685);
+}
+
+footer{
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    padding: 20px;
+    position: relative;
+    bottom: 0%;
+    text-align: center;
+}
+
+
+#navigate{
+    position: sticky;
+    top: 0%;
+    z-index: 1;
+}
+
+.menu{
+    margin: 0%; 
+    background-color: rgb(0,0,0,0.5);
+}
+
+.menu li{
+    display: inline-block;
+    padding: 10px;
+ }
+
+.menu li a{
+    color: black;
+    /* color: white;*/
+    font-size: 20px;
+    text-decoration: none;
+
+}
+
+.menu li:hover{
+    background-color: rgba(0,0,0,0.7);
+}
+
+.menu li:nth-child(2):hover #Dropdown_1{
+    display:block;
+}
+
+.menu li:nth-child(3):hover #Dropdown_2{
+    display:block;
+}
+
+#Dropdown_2, #Dropdown_1{
+    position:absolute;
+    width:auto;
+    max-width:150px;
+    display:none;
+    background-color:whitesmoke;
+    padding:0%;
+}  
+
+#Dropdown_2 li, #Dropdown_1 li{
+    display: block;
+}  
+
+#Dropdown_2 li a, #Dropdown_1 li a {
+    color:steelblue;
+    font-size:16px;
+}  
+
+#Dropdown_2 li:hover, #Dropdown_1 li:hover {
+    background-color:gainsboro;
+}  
+
+/*********************************section2 animation****************************/
+/********** below we have classes used for animation of images given************/
+
+.container_box { 
+    overflow: hidden;
+    border: 2px solid steelblue ;
+    width:100%;
+    min-width:100%;
+    display: flex;
+  }
+  
+  .wrapper {
+    display: flex;
+    animation-delay: 1s;
+    min-width:100%;
+    width:100%;
+    animation: slide 9s ease infinite;
+  }
+   
+  .wrapper img{
+    min-width:100%; 
+  }
+
+    @keyframes slide{
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(0);
+    }
+    30%{
+        transform: translateX(-100%);
+    }
+    50%{
+        transform: translateX(-100%);
+    }
+    55%{
+        transform: translateX(-200%);
+    }
+    75%{
+        transform: translateX(-200%);
+    }
+    80%{
+        transform: translateX(-300%);
+    }
+    100%{
+        transform: translateX(-300%);
+    }
+}
+    
+
+/******************classes for displaying products in covidcare and diabaties care sections*****************/
+
+
+    .section-cd{
+        margin-top:3%;
+        margin:bottom:3%;
+    }
+
+     .container{
+        display: flex; 
+        position:relative;
+        justify-content: space-between;
+        flex-direction:row;   
+        margin-top: 3%;
+        margin-left: 5%;
+        margin-bottom:3%;
+        width: 80%;
+        height:70%;
+        align:center;
+        background-color: white;      
+      }
+    
+    .container .itemcontainer {
+        display: inline-flexbox; 
+        position :relative;
+        margin:1px;
+        margin-left: 2% ;
+        margin-top :1%;
+        margin-bottom:5%;
+        padding :3px;
+        width: 20%;  
+        height:180px;
+        border :2px solid rgb(241, 239, 246);
+        background-color: rgb(250, 247, 255);
+        box-shadow: 10px 25px 30px rgba(0,0,0,0.2);
+        transition: color 100ms;                        
+      } 
+
+     #Covidcare, #Diabatiescare {
+        margin-top: 0px;
+        position: relative;  
+    }  
+
+     .container .itemcontainer .image {
+        width: 100%;   
+        height: 100px;  
+        margin:1px;  
+       }
+
+    .container .itemcontainer  h4{
+      margin-top:2px;
+      margin :1px;
+      font-size: smaller;
+    }
+
+    .container .itemcontainer  p{ 
+        color:blue;
+        margin :1px;
+        font-size: smaller;
+    }
+
+   .container .itemcontainer .btn{ 
+      position:relative;
+      padding: 6px 20px;
+      border : 1px solid rgb(110, 110, 241); 
+      border-radius: 5px;
+      box-sizing: border-box;
+      background-color : rgb(224, 213, 245);  
+      color:orange;
+      display: inline-block;
+      margin : 1px;
+      font-size: 13px;
+      font-style: bold;
+      font-weight: 600;
+      text-align: center;
+      align:center;
+      height: 12%;
+      align-items: stretch;
+      min-height:12px;
+      width:90%;
+      min-width:10px;
+      cursor: pointer;
+      transition-duration: 0.4s;             
+    }
+
+    .container .itemcontainer .btn:hover, .btn:focus {
+        background-color:rgb(250, 234, 230); 
+        border: 1px solid  rgb(0, 255, 76);
+        color: white;
+      }
+
+       
+      .container .itemcontainer .btn:active, .btn:focus
+        .btn.active {
+             background-color: rgb(255, 0, 0);
+        }
+
+       
+         .itemcontainer:hover {
+            transform: scale(1.2); 
+        }
+
+
+
+     
